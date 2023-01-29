@@ -48,7 +48,7 @@
                     >
                         {{ $icon := default "link" .Params.Icon }}
                         {{ with $icon }}
-                            {{ partial "helper/icon" . }}
+                        <i class="{{ . }}"></i>
                         {{ end }}
                     </a>
                 </li>
@@ -68,7 +68,7 @@
                     {{ warnf "Menu item [%s] is using [pre] field to set icon, please use [params.icon] instead.\nMore information: https://docs.stack.jimmycai.com/configuration/custom-menu.html" .URL }}
                 {{ end }}
                 {{ with $icon }}
-                    <i class="{{ . }}"></i>
+                    {{ partial "helper/icon" . }}
                 {{ end }}
                 <span>{{- .Name -}}</span>
             </a>
