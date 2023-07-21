@@ -2,12 +2,26 @@ toggleMenu: 切換選單
 
 darkMode: 夜晚模式
 
+list:
+    page:
+        one: "第 {{ .Count }} 頁"
+        other: "第 {{ .Count }} 頁"
+
+    section:
+        other: 段落
+
+    subsection:
+        one: 小節
+        other: 小節
+
 article:
     back: 返回
     tableOfContents: 目錄
     relatedContent: 相關文章
     lastUpdatedOn: 最後更新
-    readingTime: "閱讀時間: {{ .Count }} 分鐘"
+    readingTime:
+        one: "閱讀時間: {{ .Count }} 分鐘"
+        other: "閱讀時間: {{ .Count }} 分鐘"
 
 notFound:
     title: 404 錯誤
@@ -19,6 +33,9 @@ widget:
         more: 更多
     tagCloud:
         title: 標籤雲
+    categoriesCloud:
+        title:
+            other: 分類
 
 search:
     title: 搜尋
