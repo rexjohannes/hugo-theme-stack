@@ -17,6 +17,7 @@
 
 <script>
     let utterancesLoaded = false;
+
     function setUtterancesTheme(theme) {
         let utterances = document.querySelector('.utterances iframe');
         if (utterances) {
@@ -32,6 +33,8 @@
 
     addEventListener('message', event => {
         if (event.origin !== 'https://utteranc.es') return;
+
+        /// Called when Utterances is ready
         utterancesLoaded = true;
         setUtterancesTheme(document.documentElement.dataset.scheme)
     });

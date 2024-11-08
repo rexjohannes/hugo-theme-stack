@@ -141,10 +141,6 @@
         font-size: 1.4rem;
         transition: background-color 0.5s ease;
 
-        &:before {
-            content: "#";
-        }
-
         &:hover {
             color: var(--accent-color-text);
             background-color: var(--accent-color-darker);
